@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+	    <meta charset="utf8">
+	    <base href="/">
+	    <title>Symphony Commerce Challenge</title>
+	    <link rel="stylesheet" href="/css/app.css">
+	    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	</head>
+  	<body ng-controller="StoreCtrl">
+  		<header>
+		  	<img ng-src="images/sticky-logo.png">
+  		</header>
+  		<section class="container">
+	  		<aside class="filter-products">
+	  			<p class="sort-products-p">Sort By</p>
+	  			<section class="sort-products">
+		  			<section class="sort-products-options">
+			  			<label>
+							<input type="radio" ng-model="sortType" value="name">
+							name
+						</label><br/>
+						<input type="radio" ng-model="sortType" value="defaultPriceInCents">
+							price
+						</label><br/>
+						<label>
+							<input type="radio" ng-model="sortType" value="createdAt">
+							date
+						</label><br/>
+		  			</section>
+	  			</section>
+	  			<p class="filter-products-p">Refine By</p>
+	  			<section class="filter-products-by-price">
+		  			<p class="filter-products-by-price-p">Price</p>
+		  			<section class="filter-products-by-price-options">
+			  			<label>
+							<input type="checkbox" ng-model="under20">
+							Under $20
+						</label><br/>
+						<input type="checkbox" ng-model="between20and30">
+							$20 to $30
+						</label><br/>
+						<label>
+							<input type="checkbox" ng-model="above30">
+							$30 & Above
+						</label><br/>
+		  			</section>
+	  			</section>
+	  		</aside>
+		  	<section class="products nowrap">
+			  	<section class="product" ng-repeat="product in feeds.products | filter: filterByPrice(under20,between20and30,above30) | orderBy:sortType">
+			  		<img class="store-img" ng-src="{{ product.mainImage.ref | symphonyImageUrl }}">
+			  		<p>{{product.name | lowercase}}</p>
+			  		<p>{{product.defaultPriceInCents | toDollars | currency }}</p>
+			  	</section>
+			</section>
+  		</section>
+		<footer>
+			<p class="footer-p">&copy; 2016 | Symphony Commerce Challenge - <a class="footer-p-a" ng-href="mailto:absingharora@gmail.com">Ajay Singh</a></p>
+		</footer>
+		<section ng-view="ng-view"></section>
+  	</body>
+  	<script src="js/scripts/jquery/dist/jquery.min.js"></script>
+  	<script src="js/scripts/angular/angular.js"></script>
+  	<script src="js/scripts/angular-route/angular-route.min.js"></script>
+  	<script src="js/scripts/noty/js/noty/packaged/jquery.noty.packaged.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers/controllers.js"></script>
+	<script src="js/controllers/StoreCtrl.js"></script>
+	<script src="js/filters.js"></script>
+	<script src="js/directives.js"></script>
+</html>

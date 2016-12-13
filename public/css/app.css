@@ -1,0 +1,110 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: 'Raleway', sans-serif;
+    height: 100%;
+}
+
+/* ----------------- Header Section ------------------- */
+
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1.00em 2.875em;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+/* -------------- Filter Products Section ------------- */
+
+.filter-products{
+    padding: 6em 1em;
+    margin-left: 1.875em;
+    margin-bottom: 3em;
+    width: 20%;
+}
+.filter-products-p, .sort-products-p{
+    margin: 1.250em 0 0.625em;
+    padding: 0.625em;
+    background-color: rgb(59, 139, 177);
+    color: rgba(255, 255, 255, 0.91);
+}
+.filter-products-by-price, .sort-products{
+    border: 1px solid #ddd;
+    -webkit-box-shadow:0px 1px 1px #ddd;
+    -moz-box-shadow:0px 1px 1px #ddd;
+    box-shadow:0px 1px 1px #ddd;
+}
+.filter-products-by-price-p{
+    border-bottom: 1px solid #ddd;
+    padding: 0.625em;
+    margin: 0;
+    color: #3d6881;
+}
+.filter-products-by-price-options, .sort-products-options{
+    padding: 0.625em;
+}
+
+/* ----------------- Products Section ----------------- */
+
+.container{
+    display: flex;
+    position: relative;
+    min-height: 100%;
+}
+
+.products{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 80%;
+    padding: 6em 1em 4.50em;
+}
+.nowrap{
+    flex-wrap: wrap;
+}
+.product{
+    margin: 1.250em 1.875em;
+    text-align: center;
+    width: 22%;
+    height: auto;
+}
+.product p{
+    text-transform: capitalize;
+}
+.store-img{
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 8px -2px rgba(0,0,0,0.25);
+}
+
+/* ----------------- Footer Section ----------------- */
+
+footer{
+    position: relative;
+    margin-top: -4.50em;
+    padding: 10px 0;
+    background-color: #f3f3f3;
+    -moz-box-shadow: inset 0 7px 9px -7px rgba(134, 134, 134, 0.5);
+    -webkit-box-shadow: inset 0 7px 9px -7px rgba(134, 134, 134, 0.5);
+    box-shadow: inset 0 7px 9px -7px rgba(134, 134, 134, 0.5);
+}
+.footer-p{
+    text-align: center;
+}
+.footer-p-a{
+    text-decoration: none;
+    color: #47A4D1;
+    transition: all 0.5s;
+}
+.footer-p-a:hover{
+    color: #3D6881;
+}

@@ -1,8 +1,11 @@
 # Symphony Commerce Challenge
 Application built in **Angular.js**
 
-Start the application by
-  - installing node packages: ( ***node install*** )
+[https://ajay-symphony-challenge.herokuapp.com/](https://ajay-symphony-challenge.herokuapp.com/)
+
+**Instructions to run the app locally:**
+  - clone the repository
+  - install node packages: ( ***node install*** )
   - run: ( ***npm start*** )
 
 The app is configured for testing using ***Karma and Jasmine***
